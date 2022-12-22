@@ -3,7 +3,6 @@ $specify_directory_text = 'Please specify the directory in which YAML files will
 Write-Output ($specify_directory_text)
 $specified_directory = Read-Host -Prompt 'Directory '
 Write-Output "Your specified directory is '$specified_directory'"
-Get-ChildItem -Path $specified_directory -Include *.yml, *.yaml -Recurse
 $yaml_files_in_directory = Get-ChildItem -Path $specified_directory -Include *.yml, *.yaml -Recurse
 
 foreach ($file in $yaml_files_in_directory){

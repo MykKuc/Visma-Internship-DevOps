@@ -3,7 +3,7 @@ Set-Location D:\Sources
 $repository_location = Get-ChildItem 
 
 foreach($object in $repository_location){
-    Write-Output $file
+    Write-Output $object
     if(Test-Path -Path $object -PathType Leaf){
         Write-Output "This is not a directory. This is just a file. Aborting."
     } else {
